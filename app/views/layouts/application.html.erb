@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
+
+    <!-- Meta description et title servent au bon référencement sur google donc apporté une attention particulière-->
+    <title>Smoll</title>
+    <meta name="description" content="Vos petits déménagements, débarras et ménages à petits prix" />
+
+    <!-- Meta données google, facebook & twitter-->
+    <%= render 'shared/meta_data' %>
+
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -12,6 +20,11 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
+    <%= render 'shared/footer' %>
+
     <%= javascript_include_tag 'application' %>
+    <!-- google-analytics -->
+    <%= render 'shared/google_analytics' %>
+
   </body>
 </html>
