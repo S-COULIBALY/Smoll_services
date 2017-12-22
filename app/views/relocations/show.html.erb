@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @relocation.date %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @relocation.volume %>
+</p>
+
+<%= link_to 'Edit', edit_relocation_path(@relocation) %> |
+<%= link_to 'Back', relocations_path %>

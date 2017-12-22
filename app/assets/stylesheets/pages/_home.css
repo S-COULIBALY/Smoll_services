@@ -20,12 +20,13 @@ h2, h3 {
 }
 
 a {
-  color: blue;
+  color: white;
+  font: italic 15px "Open Sans", sans-serif;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 a:hover {
-  color: blue;
+  color: red;
   text-decoration: none;
 }
 

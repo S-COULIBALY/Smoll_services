@@ -1,0 +1,86 @@
+
+.form {
+  /* background-color: blue; */
+  border: black 1px solid;
+  width: 50%;
+}
+
+.date-volume {
+/* background-color: #EDD9F0; */
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.address  {
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 1%;
+
+
+}
+
+.loading-address, .delivery-address  {
+  /* background-color: green; */
+  width: 48%;
+}
+
+
+@media screen and (max-width: 640px) {
+  .loading-address, .delivery-address  {
+    /* background-color: green; */
+    width: 100%;
+
+  }
+
+  .form {
+    /* background-color: blue; */
+    border: black 1px solid;
+    padding: 0 0.5em;
+    width: 100%;
+  }
+
+  .date-volume {
+
+  }
+}
+
+.simple_form label {
+  font: italic 15px "Open Sans", sans-serif;
+}
+
+.form-control {
+  width: 100;
+  border-radius: 5px;
+}
+
+.button {
+ /*  background-color: #EDD9F0; */
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.btn {
+ /* background-color: #FC5B62; */
+  width: 200px;
+  border-radius: 10px;
+}
+
+
+.elevator {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*
+.simple_form div.input {
+  margin-bottom: 10px;
+  clear: both;  Required for Webkit, but not for Gecko
+  background-color: green;
+}
+*/
+

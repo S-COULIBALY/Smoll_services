@@ -1,0 +1,42 @@
+
+<div class="form">
+    <%= simple_form_for(@relocation) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="date-volume">
+      <%= f.input :date %>
+      <%= f.input :volume %>
+    </div>
+
+  <div class="address">
+      <div class="loading-address">
+        <%= f.fields_for :locations do |location_form| %>
+        <%= location_form.input :address  %>
+        <%= location_form.input :floor_number %>
+        <%= location_form.input :portage_distance %>
+        <div class="elevator">
+          <%= location_form.input :elevator, as: :select %>
+          <%= location_form.input :furniture_elevator, as: :select %>
+        </div>
+             <% end %>
+      </div>
+
+      <div class="delivery-address">
+        <%= f.fields_for :locations do |location_form| %>
+        <%= location_form.input :address %>
+        <%= location_form.input :floor_number %>
+        <%= location_form.input :portage_distance %>
+        <div class="elevator">
+          <%= location_form.input :elevator, as: :select %>
+          <%= location_form.input :furniture_elevator, as: :select %>
+        </div>
+             <% end %>
+      </div>
+
+  </div>
+    <div class="button">
+      <%= f.button :submit, "Estimer" %>
+    </div>
+    <% end %>
+</div>
+
