@@ -15,18 +15,19 @@ h1{
 }
 
 h2, h3 {
-  font-family: "Montserrat", sans-serif;
-  color: #0080FF;
+  font: italic 15px "Montserrat", "Open Sans", sans-serif;
+  font-size: 25px;
+  color: #FA5C65;
 }
 
 a {
-  color: black;
+  color: #B68B3C;
   font: italic 15px "Open Sans", sans-serif;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 a:hover {
-  color: red;
+  color: white;
   text-decoration: none;
 }
 
