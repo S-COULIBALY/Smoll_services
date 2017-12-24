@@ -46,7 +46,14 @@
   .date-volume {
 
   }
+
+  .banner{
+    height: 100%;
+  }
+
 }
+
+
 
 .simple_form label {
   font: italic 15px "Open Sans", sans-serif;
@@ -64,9 +71,9 @@
   margin: 20px;
 }
 
-.btn {
- /* background-color: #FC5B62; */
-  width: 200px;
+.btn  {
+ background-color: #FC5B62;
+  width: 400px;
   border-radius: 10px;
 }
 
