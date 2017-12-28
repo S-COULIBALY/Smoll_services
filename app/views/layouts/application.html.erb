@@ -36,6 +36,12 @@
     <script>
       function initializeAutocomplete(id) {
         var element = document.getElementById(id);
+
+    //    var options = {
+    //    types: ['(address)'],
+    //    componentRestrictions: {country: 'fr'}
+    //  };
+
         if (element) {
              var autocomplete = new google.maps.places.Autocomplete(element, { types: ['geocode'] });
              google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
@@ -62,6 +68,17 @@
         initializeAutocomplete("relocation_locations_attributes_0_address");
         initializeAutocomplete("relocation_locations_attributes_1_address");
       });
+
+      // Le code suivant limite les résultats de recherche aux villes situées en France.
+
+      // var input = document.getElementById("relocation_locations_attributes_0_address");
+      // var options = {
+      //  types: ['(cities)'],
+      //  componentRestrictions: {country: 'fr'}
+     // };
+
+     // autocomplete = new google.maps.places.Autocomplete(element, options);
+
     </script>
 
      <!-- Custom JS code to bind to Autocomplete API

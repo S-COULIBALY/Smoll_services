@@ -1,48 +1,5 @@
 
-
 // Specific CSS for your home-page
-
-
-/* --------------------------Charte graphique----------------------------------- */
-body{
-  font-family: 'Open Sans', sans-serif;
-  background-color:white;
-}
-
-h1{
-  font-family: 'Arvo', serif;
-  color: black;
-}
-
-h2, h3 {
-  font: italic 15px "Montserrat", "Open Sans", sans-serif;
-  font-size: 25px;
-  color: #FA5C65;
-}
-
-a {
-  color: #B68B3C;
-  font: italic 15px "Open Sans", sans-serif;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-a:hover {
-  color: white;
-  text-decoration: none;
-}
-
-.vertical-spacer{
-
-  height: 4em;
-}
-
-
-
-/* -------------------------- Design nabar ----------------------------------- */
-
-
-
-
 
 /* ==========================================================================
    7. How It Works Section

@@ -1,0 +1,64 @@
+/* --------------------------Charte graphique----------------------------------- */
+/*------ Syntaxe font ----*/
+/* style | variant | weight | stretch | size/line-height | family 'Arvo', serif; */
+
+body{
+  background-color:white;
+  color:#515151;
+  font: 15px "Open Sans", sans-serif;
+}
+
+
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #FA5C65;
+}
+
+h1{
+  font-weight:bold;
+  font-size: 28px;
+  color: black;
+}
+
+h2{
+  font-weight:bold;
+  font-size: 24px;
+  color: black;
+}
+
+h3{
+  font-weight:bold;
+  font-size: 19px;
+  color: black;
+}
+
+p{
+  font-size: 19px;
+  color: black;
+}
+
+
+a {
+  color: #484848;
+  font: 15px "Open Sans", sans-serif;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/*------ Espacement verticale ----*/
+
+    .vertical-spacer{
+
+      height: 4em;
+    }
+/*------ Espacement verticale ----*/
+
+.btn{
+
+}
+
+
