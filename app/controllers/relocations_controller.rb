@@ -17,7 +17,6 @@ class RelocationsController < ApplicationController
 
     @relocation = Relocation.new
       #2.times {@relocation.locations.build}
-      #@relocation.locations.build
       @relocation.locations.build
 
 

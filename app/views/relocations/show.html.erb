@@ -1,15 +1,111 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @relocation.date %>
-</p>
+<div class="container">
 
-<p>
-  <strong>Volume:</strong>
-  <%= @relocation.volume %>
-</p>
+  <div class="date-volume breadcrumb ">
+    <p>
+      <strong>Date:</strong>
+      <%= @relocation.date %>
+    </p>
 
-<%= link_to 'Retour', new_relocation_path %>
-<%= link_to 'Ajuster', edit_relocation_path(@relocation) %> |
+    <p>
+      <strong>Volume:</strong>
+      <%=@relocation.volume %>
+    </p>
+  </div>
 
+  <div class="row">
+
+    <div class="col-sm-6">
+      <div class="card bg-light">
+        <h3 class="card-header">Adresse de départ</h3>
+        <div class="card-body">
+          <div class="card-text">
+            <p>
+              <strong>Adresse:</strong>
+              <%= @relocation.locations[0].address %>
+            </p>
+
+            <p>
+              <strong>Latitude:</strong>
+              <%= @relocation.locations[0].latitude %>
+            </p>
+
+            <p>
+              <strong>Longitude:</strong>
+              <%= @relocation.locations[0].longitude %>
+            </p>
+
+            <p>
+              <strong>l'Etage:</strong>
+              <%= @relocation.locations[0].floor_number %>
+            </p>
+            <p>
+              <strong>Ascenceur:</strong>
+              <%= @relocation.locations[0].elevator %>
+            </p>
+
+            <p>
+              <strong>Monte meuble:</strong>
+              <%= @relocation.locations[0].furniture_elevator %>
+            </p>
+
+            <p>
+              <strong>Distance de portage:</strong>
+              <%= @relocation.locations[0].portage_distance %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="card bg-light">
+        <h3 class="card-header">Adresse d'arrivée</h3>
+        <div class="card-body">
+          <div class="card-text">
+            <p>
+              <strong>Adresse:</strong>
+              <%= @relocation.locations[1].address %>
+            </p>
+
+            <p>
+              <strong>Latitude:</strong>
+              <%= @relocation.locations[1].latitude %>
+            </p>
+
+            <p>
+              <strong>Longitude:</strong>
+              <%= @relocation.locations[1].longitude %>
+            </p>
+
+            <p>
+              <strong>l'Etage:</strong>
+              <%= @relocation.locations[1].floor_number %>
+            </p>
+            <p>
+              <strong>Ascenceur:</strong>
+              <%= @relocation.locations[1].elevator %>
+            </p>
+
+            <p>
+              <strong>Monte meuble:</strong>
+              <%= @relocation.locations[1].furniture_elevator %>
+            </p>
+
+            <p>
+              <strong>Distance de portage:</strong>
+              <%= @relocation.locations[1].portage_distance %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <%= link_to 'Retour', new_relocation_path %> |
+  <%= link_to 'Ajuster', edit_relocation_path(@relocation) %> |
+</div>
+
+
+<!-- params.require(:relocation).permit(:date, :volume, locations_attributes: [:address, :latitude, :longitude, :floor_number, :elevator, :furniture_elevator, :portage_distance]) -->
