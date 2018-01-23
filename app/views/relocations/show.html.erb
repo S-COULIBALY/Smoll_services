@@ -1,6 +1,7 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %> </p> -->
 
-<div class="container">
+
+<div class="container-fluid">
 
   <div class="date-volume breadcrumb ">
     <p>
@@ -23,36 +24,36 @@
           <div class="card-text">
             <p>
               <strong>Adresse:</strong>
-              <%= @relocation.locations[0].address %>
+              <%= @relocation.departure.address %>
             </p>
 
             <p>
               <strong>Latitude:</strong>
-              <%= @relocation.locations[0].latitude %>
+              <%= @relocation.departure.latitude %>
             </p>
 
             <p>
               <strong>Longitude:</strong>
-              <%= @relocation.locations[0].longitude %>
+              <%= @relocation.departure.longitude %>
             </p>
 
             <p>
               <strong>l'Etage:</strong>
-              <%= @relocation.locations[0].floor_number %>
+              <%= @relocation.departure.floor_number %>
             </p>
             <p>
               <strong>Ascenceur:</strong>
-              <%= @relocation.locations[0].elevator %>
+              <%= @relocation.departure.elevator %>
             </p>
 
             <p>
               <strong>Monte meuble:</strong>
-              <%= @relocation.locations[0].furniture_elevator %>
+              <%= @relocation.departure.furniture_elevator %>
             </p>
 
             <p>
               <strong>Distance de portage:</strong>
-              <%= @relocation.locations[0].portage_distance %>
+              <%= @relocation.departure.portage_distance %>
             </p>
           </div>
         </div>
@@ -66,36 +67,36 @@
           <div class="card-text">
             <p>
               <strong>Adresse:</strong>
-              <%= @relocation.locations[1].address %>
+              <%= @relocation.arrival.address %>
             </p>
 
             <p>
               <strong>Latitude:</strong>
-              <%= @relocation.locations[1].latitude %>
+              <%= @relocation.arrival.latitude %>
             </p>
 
             <p>
               <strong>Longitude:</strong>
-              <%= @relocation.locations[1].longitude %>
+              <%= @relocation.arrival.longitude %>
             </p>
 
             <p>
               <strong>l'Etage:</strong>
-              <%= @relocation.locations[1].floor_number %>
+              <%= @relocation.arrival.floor_number %>
             </p>
             <p>
               <strong>Ascenceur:</strong>
-              <%= @relocation.locations[1].elevator %>
+              <%= @relocation.arrival.elevator %>
             </p>
 
             <p>
               <strong>Monte meuble:</strong>
-              <%= @relocation.locations[1].furniture_elevator %>
+              <%= @relocation.arrival.furniture_elevator %>
             </p>
 
             <p>
               <strong>Distance de portage:</strong>
-              <%= @relocation.locations[1].portage_distance %>
+              <%= @relocation.arrival.portage_distance %>
             </p>
           </div>
         </div>
@@ -109,3 +110,188 @@
 
 
 <!-- params.require(:relocation).permit(:date, :volume, locations_attributes: [:address, :latitude, :longitude, :floor_number, :elevator, :furniture_elevator, :portage_distance]) -->
+<div class="vertical-spacer"></div>
+<div class="vertical-spacer"></div>
+
+<div class="container">
+    <p>Votre Devis</p>
+
+    <div class="container-devis">
+        <section class="head-devis">
+            <div class="head-devis-1"> <span class="head-content-1">Déménagement de particuliers</span> </div>
+            <div class="head-devis-2">
+                <div class="smoll-head"> <h1>SMOLL</h1> </div>
+                <span class="head-content-2" >
+                <p> 12 Résidence les Taratres <br>
+                92500 RUEIL MALMAISON <br>
+                RCS Nanterre: 820 648 962 <br>
+                Tel : 06 69 44 47 19
+                </p>
+            </div>
+            <div class="head-devis-3">
+                <ul class="head-content-3">
+                  <li>Nom client: Mr...... </li>
+                  <li>Prénom: :........... </li>
+                  <li>Devis N°:........... </li>
+                  <li>Volume: ......... m3 </li>
+                  <li>Voyage spécial [ ]   </li>
+                  <li>Voyage organiser [ ] </li>
+                  <li>Distance: ......... km </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="devis"> DEVIS </div>
+
+        <section class="client-visite">
+            <div class="client">
+              <span class="title-1"> client </span>
+              <div class="nom"> <h4>Nom du client Mr: .........</h4> </div>
+              <div class="prenom">Prénom ................</div>
+            </div>
+            <div class="visite">
+              <div class="commercial">Visité par Mr: ....</div>
+              <div class="date-visite"> Date: ..................</div>
+              <div class="inventaire"> Selon inventaire établi par le client [ ] </div>
+            </div>
+        </section>
+
+        <section class="chargement-livraison">
+            <div class="side-chargement-livraison">
+              <div class="date">Date ou période</div>
+              <div class="adresse">Adresse</div>
+              <div class="batiment">Bâtiment et Accès</div>
+            </div>
+            <div class="chargement">
+              <div class="chargement-head">CHARGEMENT</div>
+            </div>
+            <div class="livraison">
+              <div class="livraison-head">LIVRAISON</div>
+            </div>
+        </section>
+
+
+        <section class="prestations-conditions-difficultes">
+            <div class="prestations">
+              <span class="title-1">PRESTATIONS DU SERVICE STANDARD DE DÉMÉNAGEMENT</span>
+              <p>Conditionnement (emballage, démontage, protection, manutention (chargement, déchargement.........</p>
+            </div>
+            <div class="conditions-difficultes">
+                <div class="conditions">
+                  <span class="title-1">CONDITIONS PARTICULIÈRES:</span>
+                </div>
+
+                <div class="difficultes">
+                  <div class="difficults-head">
+                    <span class="title-1"> EN CAS DE DIFFICULTÉS </span>
+                    <p>En cas de difficultés non signalées (article 1 des conditions générales de vente) <span class="title-1"> suppléments éventuels divers:  </span> </p>
+                  </div>
+
+                  <div class="supplements">
+                    <div class="monte-meuble">
+                      <span class="title-2"> Monte-meubles </span>
+                      <p>(1/2 journée)</p>
+                      <p>............€ ht</p>
+                    </div>
+
+                    <div class="mains-oeuvre">
+                      <span class="title-2"> Mains-d'oeuvre </span>
+                      <p>(1/2 journée)</p>
+                      <p>............€ ht</p>
+                    </div>
+
+                    <div class="vehicule-leger">
+                      <span class="title-2"> Véhicule utilitaire légér </span>
+                      <p>(1 journée)</p>
+                      <p>............€ ht</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="details">
+            <div class="detail-prestations">
+                <ul>
+                  <li>TRACTION - Véhicule et Kilométrage</li>
+                  <li>MAIN-D'OEUVRE et frais de déplacement du personnel</li>
+                  <li>UTILISATION DU MATERIEL - pour conditionnement et manutention</li>
+                  <li>
+                      FOURNITURES D'EMBALLAGES PERDUS
+                      <p>
+                        - Selon fournitures prévus <br>
+                        - ou au forfait .............m3   à   .............€
+                      </p>
+                  </li>
+                  <li>
+                      GARANTIE DE RESPONSABILITÉ CONTRACTUELLE
+                      <p>
+                        Rappel de la déclaration de valeur: <br>
+                        - valeur totale du mobiler    ......... € <br>
+                        - valeurs individuelles des objets listés ........... € <br>
+                        - valeur maximale par objet non listé ............... € <br>
+                      </p>
+                  </li>
+                  <li>
+                      OPTION ASSURANCE DOMMAGE
+                      <p>
+                        Rappel de la déclaration de valeur: <br>
+                        - valeur totale du mobiler    ......... € <br>
+                        - valeurs individuelles des objets listés ........... € <br>
+                      </p>
+                  </li>
+                </ul>
+            </div>
+            <div class="montants">montant</div>
+        </section>
+
+        <section class="paiement">
+            <span class="title-1">MODALITÉS DE PAIEMENT</span>
+            <div class="modalites-paiement">
+              <div class="arrhes">
+                <span class="title-1">
+                  PAYABLE À LA COMMANDE: ......................... <br>
+                  .......................................................................... <br>
+                  .......................................................................... <br>
+                  .......................................................................... <br>
+                 </span>
+                 <p>
+                   <ul>
+                     <li>Le devis signé par le client devient le contrat. <br>
+                      Pour l'acceptation du présent devis et des conditions générales et particulières, <br>
+                      se reporter à la page CGV (lien cliquable).
+
+                     </li>
+                   </ul>
+                 </p>
+
+                 <div class="signature">
+                  Signature du client <br> <br>
+                  ..............................
+                </div>
+
+              </div>
+              <div class="total">
+                <p>TOTAL HT</p>
+                <p>TVA</p>
+                <p>TOTAL TTC</p>
+                <p>
+                  Devis établi à RUEIL MALMAISON le ............. <br>
+                  Conditions valables jusqu'au : ................ <br>
+
+                  <div class="signature">
+                    Signature de l'entreprise <br> <br>
+                    ..............................
+                  </div>
+                </p>
+              </div>
+            </div>
+            <p>RETOURNER à l'entreprise ce devis signé au: 12 Résidence les Taratres
+                92500 RUEIL MALMAISON </p>
+        </section>
+    </div>
+</div>
+
+
+

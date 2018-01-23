@@ -1,12 +1,10 @@
 
 .form {
-  /* background-color: blue; */
   border: black 0px solid;
   width: 70%;
 }
 
 .date-volume {
-/* background-color: #EDD9F0; */
   width: auto;
   display: flex;
   flex-wrap: wrap;
@@ -14,7 +12,6 @@
 }
 
 .address  {
-  /* background-color: yellow; */
   border: 1px solid #0E7E12;
   display: flex;
   justify-content: space-around;
@@ -31,39 +28,37 @@ fieldset {
 */
 
 .loading-address, .delivery-address  {
-  /* background-color: green; */
   width: 48%;
 }
 
 
 @media screen and (max-width: 640px) {
-  .loading-address, .delivery-address  {
-    /* background-color: green; */
-    width: 100%;
 
-  }
+        .loading-address, .delivery-address  {
+          width: 100%;
+        }
 
-  .form {
-    /* background-color: blue; */
-    border: black 1px solid;
-    padding: 0 0.5em;
-    width: 100%;
-  }
+        .form {
+          border: black 1px solid;
+          padding: 0 0.5em;
+          width: 100%;
+        }
 
-  .date-volume {
+        .date-volume {
 
-  }
+        }
 
-  .banner{
-    height: 100%;
-  }
-
+        .banner{
+          height: 100%;
+        }
 }
 
 
 
 .simple_form label {
-  font: italic 15px "Open Sans", sans-serif;
+  color: black;
+  font: 13px "Open Sans", sans-serif;
+  font-weight: bold;
 }
 
 .form-control {
@@ -73,16 +68,9 @@ fieldset {
 }
 
 .button {
- /*  background-color: #EDD9F0; */
   display: flex;
   justify-content: space-around;
   margin: 20px;
-}
-
-.btn  {
- background-color: #FC5B62;
-  width: 400px;
-  border-radius: 10px;
 }
 
 

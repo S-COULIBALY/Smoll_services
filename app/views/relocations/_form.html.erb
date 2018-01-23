@@ -10,7 +10,7 @@
 
   <div class="address">
       <div class="loading-address">
-        <%= f.fields_for :locations do |location_form| %>
+        <%= f.fields_for :departure do |location_form| %>
         <%= location_form.input :address, label: 'Adresse de départ', placeholder: 'Entrer votre adresse de chargement' %>
         <%= location_form.input :floor_number, label: "Numéro d'étage" , placeholder: "Entrer votre Numéro d'étage" %>
         <%= location_form.input :portage_distance, label: "Distance de portage" , placeholder: "Entrer la distance entre la maison et le camion" %>
@@ -22,7 +22,7 @@
       </div>
 
       <div class="delivery-address">
-        <%= f.fields_for :locations do |location_form| %>
+        <%= f.fields_for :arrival do |location_form| %>
         <%= location_form.input :address, label: "Adresse d'Arrivée" , placeholder: "Entrer votre adresse de déchargement" %>
         <%= location_form.input :floor_number, label: "Numéro d'étage" , placeholder: "Entrer votre Numéro d'étage" %>
         <%= location_form.input :portage_distance, label: "Distance de portage" , placeholder: "Entrer la distance entre la maison et le camion" %>

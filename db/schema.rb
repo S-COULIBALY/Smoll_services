@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171217095957) do
+ActiveRecord::Schema.define(version: 20180119145209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,7 +45,10 @@ ActiveRecord::Schema.define(version: 20171217095957) do
     t.float "volume"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "loading_location_id"
+    t.bigint "departure_id"
+    t.bigint "arrival_id"
+    t.index ["arrival_id"], name: "index_relocations_on_arrival_id"
+    t.index ["departure_id"], name: "index_relocations_on_departure_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -66,4 +69,6 @@ ActiveRecord::Schema.define(version: 20171217095957) do
   end
 
   add_foreign_key "locations", "relocations"
+  add_foreign_key "relocations", "locations", column: "arrival_id"
+  add_foreign_key "relocations", "locations", column: "departure_id"
 end

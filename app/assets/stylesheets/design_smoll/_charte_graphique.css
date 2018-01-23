@@ -1,9 +1,10 @@
+
 /* --------------------------Charte graphique----------------------------------- */
 /*------ Syntaxe font ----*/
 /* style | variant | weight | stretch | size/line-height | family 'Arvo', serif; */
 
-body{
-  background-color:white;
+body {
+  background-color: white;
   color:#515151;
   font: 15px "Open Sans", sans-serif;
 }
@@ -41,6 +42,7 @@ p{
 a {
   color: #484848;
   font: 15px "Open Sans", sans-serif;
+  font-weight:bold;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -49,6 +51,37 @@ a:hover {
   text-decoration: none;
 }
 
+/* ------  design par defaut des formulaires du site ------ */
+
+
+/* ------  design par defaut des inputs (form-control) du site ------ */
+
+
+
+/* ------  design par defaut des boutons du site ------ */
+.btn  {
+  background-color: #FC5B62;
+  width: 400px;
+  border-radius: 10px;
+  padding: .5rem 1rem;
+  font-size: 15px;
+  font-weight:bold;
+}
+
+.btn:hover {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+/* ------  design par defaut des cards du site ------ */
+
+
+/* ------  design par defaut des media queries du site ------ */
+
+
+
 /*------ Espacement verticale ----*/
 
     .vertical-spacer{
@@ -56,9 +89,3 @@ a:hover {
       height: 4em;
     }
 /*------ Espacement verticale ----*/
-
-.btn{
-
-}
-
-

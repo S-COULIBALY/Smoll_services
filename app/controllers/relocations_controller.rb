@@ -17,13 +17,15 @@ class RelocationsController < ApplicationController
 
     @relocation = Relocation.new
       #2.times {@relocation.locations.build}
-      @relocation.locations.build
+      @relocation.departure = Location.new
+      @relocation.arrival = Location.new
 
 
   end
 
   # GET /relocations/1/edit
   def edit
+
   end
 
   # POST /relocations
@@ -75,6 +77,10 @@ class RelocationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def relocation_params
-      params.require(:relocation).permit(:date, :volume, locations_attributes: [:address, :latitude, :longitude, :floor_number, :elevator, :furniture_elevator, :portage_distance])
+      params.require(:relocation).permit(
+        :date, :volume,
+        departure_attributes: [:address, :latitude, :longitude, :floor_number, :elevator, :furniture_elevator, :portage_distance],
+        arrival_attributes: [:address, :latitude, :longitude, :floor_number, :elevator, :furniture_elevator, :portage_distance]
+        )
     end
 end
