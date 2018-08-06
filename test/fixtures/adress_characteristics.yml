@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  floor_number: 1
+  elevator: false
+  elevator_capacity: 1
+  furniture_elevator: false
+  furniture_elevator_capacity: 1
+  r: MyString
+  carry_distance: 9.99
+  adress: one
+
+two:
+  floor_number: 1
+  elevator: false
+  elevator_capacity: 1
+  furniture_elevator: false
+  furniture_elevator_capacity: 1
+  r: MyString
+  carry_distance: 9.99
+  adress: two
