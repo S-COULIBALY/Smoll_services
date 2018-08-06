@@ -1,22 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.4.0'
 
-gem 'devise'
-gem 'figaro'
-gem 'jbuilder', '~> 2.0'
-gem 'pg'
 gem 'puma'
 gem 'rails', '5.1.4'
-gem 'redis'
-gem 'geocoder'
 
-gem 'autoprefixer-rails'
-gem 'bootstrap-sass'
-gem 'font-awesome-sass'
-gem 'jquery-rails'
-gem 'sass-rails'
-gem 'simple_form'
-gem 'uglifier'
+
 
 group :development, :test do
   gem 'pry-byebug'
@@ -24,5 +12,6 @@ group :development, :test do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'rspec-rails'
+  gem 'sqlite3'
+  gem 'minitest-rails', '~> 3.0.0'
 end
