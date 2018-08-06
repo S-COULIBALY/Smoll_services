@@ -9,3 +9,9 @@ public/assets
 
 # Ignore application configuration
 /config/application.yml
+
+.idea/
+
+#Databases
+Smoll_services_development
+Smoll_services_test
