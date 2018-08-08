@@ -5,7 +5,7 @@ class CreateAdresses < ActiveRecord::Migration[5.1]
       t.integer :postal_code
       t.string :city
       t.text :details
-      t.integer :adress_type
+      t.string :adress_type
       t.decimal :longitude
       t.decimal :lattitude
       t.string :complete_adress

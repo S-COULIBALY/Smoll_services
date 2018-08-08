@@ -5,7 +5,7 @@ one:
   postal_code: 75002
   city: Paris
   details: Immeuble Lorient
-  adress_type: 0
+  adress_type: departure
   longitude: 9.99
   lattitude: 9.99
   complete_adress: 3 Rue des bourgeois 75002
@@ -16,7 +16,7 @@ two:
   postal_code: 90000
   city: Belfort
   details: Résidences Florys
-  adress_type: 2
+  adress_type: arrival
   longitude: 9.99
   lattitude: 9.99
   complete_adress: 15 Boulevard Anatole France

@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20180805215555) do
     t.integer "elevator_capacity"
     t.boolean "furniture_elevator"
     t.integer "furniture_elevator_capacity"
-    t.string "r"
     t.decimal "carry_distance"
     t.integer "adress_id"
     t.datetime "created_at", null: false
@@ -31,7 +30,7 @@ ActiveRecord::Schema.define(version: 20180805215555) do
     t.integer "postal_code"
     t.string "city"
     t.text "details"
-    t.integer "adress_type"
+    t.string "adress_type"
     t.decimal "longitude"
     t.decimal "lattitude"
     t.string "complete_adress"
