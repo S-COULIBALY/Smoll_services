@@ -16,10 +16,9 @@ class AdressTest < ActiveSupport::TestCase
 
         saved_adress = Adress.find_by(street_name: '9 Avenue Luc-Petain')
 
-
         assert_equal saved_adress.id, adresse_depart.id
         assert_equal saved_adress.adress_type, 'departure'
-        assert_kind_of Relocation, @relocation
+        assert_kind_of Relocation, adresse_depart.relocation
         assert_equal saved_adress.relocation, @relocation
     end
 end

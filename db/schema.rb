@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20180805215555) do
     t.integer "elevator_capacity"
     t.boolean "furniture_elevator"
     t.integer "furniture_elevator_capacity"
-    t.string "r"
     t.decimal "carry_distance"
     t.integer "adress_id"
     t.datetime "created_at", null: false

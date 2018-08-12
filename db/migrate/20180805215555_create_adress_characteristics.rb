@@ -6,7 +6,10 @@ class CreateAdressCharacteristics < ActiveRecord::Migration[5.1]
       t.integer :elevator_capacity
       t.boolean :furniture_elevator
       t.integer :furniture_elevator_capacity
+<<<<<<< HEAD
       t.string :r
+=======
+>>>>>>> 17081989f85f6a05d59bc35c3a067b7cbeb529bd
       t.decimal :carry_distance
       t.references :adress, foreign_key: true
 

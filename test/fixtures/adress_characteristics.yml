@@ -6,7 +6,6 @@ one:
   elevator_capacity: 1
   furniture_elevator: false
   furniture_elevator_capacity: 1
-  r: MyString
   carry_distance: 9.99
   adress: one
 
@@ -16,6 +15,5 @@ two:
   elevator_capacity: 1
   furniture_elevator: false
   furniture_elevator_capacity: 1
-  r: MyString
   carry_distance: 9.99
   adress: two
