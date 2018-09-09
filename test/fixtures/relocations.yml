@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  relocation_type: :particular
   date: 2018-08-05 23:33:56
   volume: 9.99
+  formula: économique
 
 two:
+  relocation_type: :compagny
   date: 2018-08-05 23:33:56
   volume: 9.99
+  formula: standard

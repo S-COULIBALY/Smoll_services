@@ -1,23 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  street_name: 3 Rue des bourgeois
-  postal_code: 75002
-  city: Paris
-  details: Immeuble Lorient
-  adress_type: 0
+  street_number: 12
+  street_name: residence les taratres
+  postal_code: 92500
+  city: Rueil malmaison
+  details: Quartier résidentiel
+  adress_type: :departure
   longitude: 9.99
   lattitude: 9.99
-  complete_adress: 3 Rue des bourgeois 75002
-  relocation: one
+  complete_adress: 12 residence les taratres 92500 Rueil malmaison
+  relocation_id: @relocation.id
 
 two:
-  street_name: 15 Boulevard Anatole France
-  postal_code: 90000
-  city: Belfort
-  details: Résidences Florys
-  adress_type: 2
+  street_number: 9
+  street_name: rue barbès
+  postal_code: 94200
+  city: Ivry sur seine
+  details: proche du moulin d\'ivry
+  adress_type: :arrival
   longitude: 9.99
   lattitude: 9.99
-  complete_adress: 15 Boulevard Anatole France
-  relocation: one
+  complete_adress: 9 rue barbès 94200 ivry sur seine
+  relocation_id: @relocation.id

@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  residence_type: :house
   floor_number: 1
   elevator: false
-  elevator_capacity: 1
+  elevator_capacity: 9
   furniture_elevator: false
-  furniture_elevator_capacity: 1
-  carry_distance: 9.99
-  adress: one
+  carry_distance: 235
+  adress_id: one
 
 two:
+  residence_type: :partment
   floor_number: 1
   elevator: false
   elevator_capacity: 1
   furniture_elevator: false
-  furniture_elevator_capacity: 1
   carry_distance: 9.99
   adress: two

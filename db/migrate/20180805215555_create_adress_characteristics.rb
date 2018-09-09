@@ -1,16 +1,12 @@
 class CreateAdressCharacteristics < ActiveRecord::Migration[5.1]
   def change
     create_table :adress_characteristics do |t|
-      t.integer :floor_number
-      t.boolean :elevator
-      t.integer :elevator_capacity
-      t.boolean :furniture_elevator
-      t.integer :furniture_elevator_capacity
-<<<<<<< HEAD
-      t.string :r
-=======
->>>>>>> 17081989f85f6a05d59bc35c3a067b7cbeb529bd
-      t.decimal :carry_distance
+      t.string  :residence_type, null: false
+      t.integer :floor_number,   null: false
+      t.boolean :elevator,       null: false
+      t.integer :elevator_capacity,   null: false
+      t.boolean :furniture_elevator,  null: false
+      t.decimal :carry_distance,      null: false
       t.references :adress, foreign_key: true
 
       t.timestamps

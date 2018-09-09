@@ -13,12 +13,12 @@
 ActiveRecord::Schema.define(version: 20180805215555) do
 
   create_table "adress_characteristics", force: :cascade do |t|
-    t.integer "floor_number"
-    t.boolean "elevator"
-    t.integer "elevator_capacity"
-    t.boolean "furniture_elevator"
-    t.integer "furniture_elevator_capacity"
-    t.decimal "carry_distance"
+    t.string "residence_type", null: false
+    t.integer "floor_number", null: false
+    t.boolean "elevator", null: false
+    t.integer "elevator_capacity", null: false
+    t.boolean "furniture_elevator", null: false
+    t.decimal "carry_distance", null: false
     t.integer "adress_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -26,14 +26,15 @@ ActiveRecord::Schema.define(version: 20180805215555) do
   end
 
   create_table "adresses", force: :cascade do |t|
-    t.string "street_name"
-    t.integer "postal_code"
-    t.string "city"
-    t.text "details"
-    t.integer "adress_type"
-    t.decimal "longitude"
-    t.decimal "lattitude"
-    t.string "complete_adress"
+    t.string "street_number", null: false
+    t.string "street_name", null: false
+    t.integer "postal_code", null: false
+    t.string "city", null: false
+    t.text "details", null: false
+    t.integer "adress_type", default: 0, null: false
+    t.decimal "longitude", null: false
+    t.decimal "lattitude", null: false
+    t.string "complete_adress", null: false
     t.integer "relocation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -41,8 +42,10 @@ ActiveRecord::Schema.define(version: 20180805215555) do
   end
 
   create_table "relocations", force: :cascade do |t|
-    t.datetime "date"
-    t.decimal "volume"
+    t.string "relocation_type", null: false
+    t.datetime "date", null: false
+    t.decimal "volume", null: false
+    t.string "formula", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
