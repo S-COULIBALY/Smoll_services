@@ -1,12 +1,10 @@
 class Relocation < ApplicationRecord
-    has_many :linked_addresses, dependent: :destroy
+    #has_many :linked_addresses, dependent: :destroy
     enum relocation_type: [:particular, :compagny, :association]
     enum formula: [:standard, :economic, :comfort, :luxury]
 
-    validates :relocation_type, :date, :volume, :formula, presence: true
+    validates :relocation_type, :formula, :date, :volume, :distance, presence: true
     validates :volume, numericality: { greater_than_or_equal_to: 5 }
-
-
     validates :relocation_type, inclusion: { in: %w(particular compagny association),
     message: "%{value} is not a valid relocation_type" }
     validates :formula, inclusion: { in: %w(standard economic comfort luxury),

@@ -12,10 +12,13 @@ class RelocationTest < ActiveSupport::TestCase
 
     def setup
 
-      @relocation = Relocation.new(relocation_type: :particular,
+      @relocation = Relocation.new(relocation_type: 1,
+                                  formula: 2,
                                   date: Date.new,
                                   volume: 42,
-                                  formula: :economic
+                                  distance: 200,
+                                  worker: 5,
+                                  amount: 15600
                                  )
      @relocation.save!
     end
@@ -26,9 +29,12 @@ class RelocationTest < ActiveSupport::TestCase
 
   test "relocation_type, date, volume, formula, should be present" do
     @relocation.relocation_type = "   "
+    @relocation.formula = "   "
     @relocation.date = "   "
     @relocation.volume = "   "
-    @relocation.formula = "   "
+    @relocation.distance = " "
+    @relocation.worker = " "
+    @relocation.amount = " "
     assert @relocation.invalid?
   end
 
@@ -42,9 +48,13 @@ class RelocationTest < ActiveSupport::TestCase
     assert empty_relocation.invalid?
     #empty_relocation.errors.full_messages
     assert empty_relocation.errors[:relocation_type].any?
+    assert empty_relocation.errors[:formula].any?
     assert empty_relocation.errors[:date].any?
     assert empty_relocation.errors[:volume].any?
-    assert empty_relocation.errors[:formula].any?
+    assert empty_relocation.errors[:distance].any?
+    assert empty_relocation.errors[:worker].any?
+    assert empty_relocation.errors[:amount].any?
+
   end
 
   test "@relocation should be persisted ]" do

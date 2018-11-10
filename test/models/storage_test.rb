@@ -15,6 +15,7 @@ class StorageTest < ActiveSupport::TestCase
                             weight: 25.40,
                             volume: 50,
                             distance: 300,
+                            carrying_distance: 100,
                             worker: 4,
                             amount: 1200
                             )
@@ -27,6 +28,8 @@ class StorageTest < ActiveSupport::TestCase
 
     test "date should be présent " do
        @storage.date = " "
+       #@storage.weight = " "
+       #@storage.volume = " "
       assert_not @storage.valid?
     end
 
@@ -39,4 +42,6 @@ class StorageTest < ActiveSupport::TestCase
        @storage.volume = " "
       assert_not @storage.valid?
     end
+
+
 end

@@ -17,20 +17,28 @@ ActiveRecord::Schema.define(version: 20181031013716) do
     t.string "street_name", null: false
     t.integer "zip_code", null: false
     t.string "city", null: false
-    t.text "details"
+    t.text "details", null: false
     t.integer "address_type", null: false
     t.decimal "longitude", null: false
     t.decimal "lattitude", null: false
     t.string "complete_address", null: false
+    t.decimal "carrying_distance", null: false
+    t.integer "floor_number", null: false
+    t.boolean "elevator", null: false
+    t.integer "elevator_capacity", null: false
+    t.boolean "furniture_elevator", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "relocations", force: :cascade do |t|
     t.integer "relocation_type", null: false
+    t.integer "formula", null: false
     t.datetime "date", null: false
     t.decimal "volume", null: false
-    t.integer "formula", null: false
+    t.decimal "distance", null: false
+    t.integer "worker", null: false
+    t.decimal "amount", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -39,9 +47,10 @@ ActiveRecord::Schema.define(version: 20181031013716) do
     t.date "date", null: false
     t.decimal "weight", null: false
     t.decimal "volume", null: false
-    t.decimal "distance"
-    t.integer "worker"
-    t.decimal "amount"
+    t.decimal "distance", null: false
+    t.decimal "carrying_distance", null: false
+    t.integer "worker", null: false
+    t.decimal "amount", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
