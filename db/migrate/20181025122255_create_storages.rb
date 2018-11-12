@@ -4,10 +4,9 @@
       t.date :date, null: false
       t.decimal :weight, null: false
       t.decimal :volume, null: false
-      t.decimal :distance, null: false
-      t.decimal :carrying_distance, null: false
-      t.integer :worker, null: false
-      t.decimal :amount, null: false
+      #t.decimal :distance
+      #t.integer :worker
+      #t.decimal :amount
 
       t.timestamps
     end

@@ -5,9 +5,9 @@ class CreateRelocations < ActiveRecord::Migration[5.1]
       t.integer :formula, null: false
       t.datetime :date, null: false
       t.decimal  :volume, null: false
-      t.decimal :distance, null: false
-      t.integer :worker, null: false
-      t.decimal :amount, null: false
+      #t.decimal :distance
+      #t.integer :worker
+      #t.decimal :amount
 
       t.timestamps
     end

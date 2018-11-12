@@ -14,10 +14,6 @@ class StorageTest < ActiveSupport::TestCase
      @storage = Storage.new(date: Date.new,
                             weight: 25.40,
                             volume: 50,
-                            distance: 300,
-                            carrying_distance: 100,
-                            worker: 4,
-                            amount: 1200
                             )
      #@storage.save!
     end
@@ -28,8 +24,6 @@ class StorageTest < ActiveSupport::TestCase
 
     test "date should be présent " do
        @storage.date = " "
-       #@storage.weight = " "
-       #@storage.volume = " "
       assert_not @storage.valid?
     end
 
@@ -42,6 +36,34 @@ class StorageTest < ActiveSupport::TestCase
        @storage.volume = " "
       assert_not @storage.valid?
     end
+
+      test "volume should be an integer and greater_than_or_equal_to 1" do
+        @storage.volume= -1
+        assert_not @storage.valid?
+      end
+
+       test "weight should be an integer and greater_than_or_equal_to 1" do
+        @storage.weight= -1
+        assert_not @storage.valid?
+      end
+
+    test "@storage attributes must not be empty" do
+       storage= Storage.new()
+       assert storage.invalid?
+       #storage.errors.full_messages
+
+       assert storage.errors[:date].any?
+       assert storage.errors[:weight].any?
+       assert storage.errors[:volume].any?
+    end
+
+    test "@storage should be persisted ]" do
+         @storage.save!
+         saved_storage= Storage.find_by(weight: 25.40)
+         assert_equal saved_storage.id, @storage.id
+         assert_equal saved_storage.volume , 50
+      end
+
 
 
 end

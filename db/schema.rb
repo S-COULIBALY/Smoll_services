@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20181031013716) do
 
   create_table "addresses", force: :cascade do |t|
-    t.string "street_number", null: false
+    t.integer "street_number", null: false
     t.string "street_name", null: false
     t.integer "zip_code", null: false
     t.string "city", null: false
@@ -36,9 +36,6 @@ ActiveRecord::Schema.define(version: 20181031013716) do
     t.integer "formula", null: false
     t.datetime "date", null: false
     t.decimal "volume", null: false
-    t.decimal "distance", null: false
-    t.integer "worker", null: false
-    t.decimal "amount", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -47,10 +44,6 @@ ActiveRecord::Schema.define(version: 20181031013716) do
     t.date "date", null: false
     t.decimal "weight", null: false
     t.decimal "volume", null: false
-    t.decimal "distance", null: false
-    t.decimal "carrying_distance", null: false
-    t.integer "worker", null: false
-    t.decimal "amount", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

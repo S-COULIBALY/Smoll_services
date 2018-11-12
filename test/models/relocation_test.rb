@@ -12,13 +12,10 @@ class RelocationTest < ActiveSupport::TestCase
 
     def setup
 
-      @relocation = Relocation.new(relocation_type: 1,
-                                  formula: 2,
+      @relocation = Relocation.new(relocation_type: "particular" ,
+                                  formula: :standard,
                                   date: Date.new,
                                   volume: 42,
-                                  distance: 200,
-                                  worker: 5,
-                                  amount: 15600
                                  )
      @relocation.save!
     end
@@ -32,9 +29,6 @@ class RelocationTest < ActiveSupport::TestCase
     @relocation.formula = "   "
     @relocation.date = "   "
     @relocation.volume = "   "
-    @relocation.distance = " "
-    @relocation.worker = " "
-    @relocation.amount = " "
     assert @relocation.invalid?
   end
 
@@ -51,17 +45,15 @@ class RelocationTest < ActiveSupport::TestCase
     assert empty_relocation.errors[:formula].any?
     assert empty_relocation.errors[:date].any?
     assert empty_relocation.errors[:volume].any?
-    assert empty_relocation.errors[:distance].any?
-    assert empty_relocation.errors[:worker].any?
-    assert empty_relocation.errors[:amount].any?
 
   end
 
   test "@relocation should be persisted ]" do
-       @relocation.save!
-       saved_relocation = Relocation.find_by(formula: :economic)
+      p @relocation.save!
+      p @relocation
+      p saved_relocation = Relocation.find_by(volume: 42)
        assert_equal saved_relocation.id, @relocation.id
-       assert_equal saved_relocation.relocation_type, 'particular'
+       assert_equal saved_relocation.relocation_type, "particular"
      # p "Found relocation type : #{saved_relocation.relocation_type} ---- #{@relocation.relocation_type}"
     end
 

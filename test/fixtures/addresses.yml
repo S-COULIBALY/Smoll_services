@@ -10,6 +10,11 @@ one:
   longitude: 9.99
   lattitude: 9.99
   complete_address: MyString
+  carrying_distance: 233.88
+  floor_number: 3
+  elevator: false
+  elevator_capacity: 7
+  furniture_elevator: true
 
 two:
   street_number: MyString
@@ -21,3 +26,8 @@ two:
   longitude: 9.99
   lattitude: 9.99
   complete_address: MyString
+  carrying_distance: 233.88
+  floor_number: 3
+  elevator: false
+  elevator_capacity: 7
+  furniture_elevator: true
