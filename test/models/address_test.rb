@@ -14,51 +14,74 @@ def setup
                           complete_address: "12 Résidence les taratres 92500 Rueil Malmaison",
                           carrying_distance: 288,
                           floor_number: 5,
-                          elevator: true,
+                          elevator: false,
                           elevator_capacity: 6,
                           furniture_elevator: false
                         )
-  #@address.save!
 end
 
   test "address with all attributes setting should be valid" do
   assert @address.valid?
   end
 
-  test "street_number, street_name, zip_code, city, :address_type, complete_address, should be present" do
+  test "address_type should be present" do
     @address.address_type = "   "
-    @address.complete_address = "   "
-    @address.carrying_distance = "   "
-    @address.floor_number = "   "
-    @address.elevator = "   "
-    @address.elevator_capacity = "   "
-    @address.furniture_elevator ="   "
-    @address.errors.full_messages
     assert_not @address.valid?
   end
 
-  test "street_number should be an integer and greater_than_or_equal_to 1" do
-    @address.street_number= -1
+  test "complete_address should be present" do
+    @address.complete_address = "   "
     assert_not @address.valid?
   end
+
+  test "carrying_distance should be present" do
+    @address.carrying_distance = "   "
+    assert_not @address.valid?
+  end
+
+  test "floor_number should be present" do
+    @address.floor_number = "   "
+    assert_not @address.valid?
+  end
+
+  test "elevator should be present" do
+    @address.elevator = "   "
+    assert_not @address.valid?
+  end
+
+  test "elevator_capacity should be present" do
+    @address.elevator_capacity = "   "
+    assert_not @address.valid?
+  end
+
+  test "furniture_elevator should be present" do
+    @address.furniture_elevator = "   "
+    assert_not @address.valid?
+  end
+
+
+ test "street_number should be an integer and greater_than_or_equal_to 1" do
+   @address.street_number= -1
+   assert_not @address.valid?
+ end
 
 test "address_type should be include in [departure, arrival ]" do
      @address.address_type= " "
      assert_not @address.valid?
-  end
+ end
 
 test "@address attributes must notbe empty" do
    address= Address.new()
    assert address.invalid?
-   #address.errors.full_messages
+   address.errors.full_messages
 
    assert address.errors[:address_type].any?
    assert address.errors[:complete_address].any?
    assert address.errors[:carrying_distance].any?
    assert address.errors[:floor_number].any?
-   assert address.errors[:elevator].any?
+   #assert address.errors[:elevator].any?
    assert address.errors[:elevator_capacity].any?
-   assert address.errors[:furniture_elevator].any?
+   #assert address.errors[:furniture_elevator].any?
 end
 
 test "@address should be persisted ]" do
